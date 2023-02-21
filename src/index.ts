@@ -99,8 +99,8 @@ app.post('/auth/getUsers', async (req: Request, res: Response) => {
   // const limit = req?.body?.offset || 10;
   let { user } = await client.request(
     gql`
-      query GetUsers($offset: Int!, $limit: Int!) {
-        user(offset: $offset, limit: $limit) {
+      query GetUsers{
+        user{
           id
           first_name
           last_name
